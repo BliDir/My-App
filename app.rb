@@ -1,10 +1,10 @@
 require 'bundler/setup'
 require 'sinatra/base'
 require_relative 'config/environment'
-require_relative 'routes/hello'
+require_relative 'routes/books'
 
 class App < Sinatra::Base
-  use Routes::Hello
+  use Routes::Books
 
   error do
     LOGGER.error(env['sinatra.error'].message)
